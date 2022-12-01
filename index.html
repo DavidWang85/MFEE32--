@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bootstrap-5.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h1><a class="navbar-brand logo ms-auto" href="./index.html">LOGO</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-center active" aria-current="page" href="./index.html">首頁</a>
+                    <a class="nav-link text-center" href="./index.html">關於我們</a>
+                    <a class="nav-link text-center" onclick="nextPage()" href="#">遊戲區</a>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#logInModal">登入</button>
+                    <button class="btn btn-danger" type="button" data-bs-toggle="modal"
+                        data-bs-target="#signInModal">註冊</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner ">
+        <h2><a href="#" class="banner-title">盡情享受<br>遊戲時光</a></h2>
+    </div>
+    <div class="category">
+        <a href="./poker-game.html" class="category-area">
+            <p class="category-game-title">遊戲</p>
+            <div class="category-game-img"></div>
+        </a>
+        <a href="#" class="category-area">
+            <p class="category-tv-title">影片</p>
+            <div class="category-tv-img"></div>
+        </a>
+        <a href="#" class="category-area">
+            <p class="category-text-title">攻略</p>
+            <div class="category-text-img"></div>
+        </a>
+        <a href="#" class="category-area">
+            <p class="category-buy-title">購買</p>
+            <div class="category-buy-img"></div>
+        </a>
+    </div>
+    <footer class="pt-3 text-white-50 bg-dark footer text-center">
+        <p>Copyright © 2022 聖禮 All rights reserved</p>
+    </footer>
+    <!-- <div class="container">
+        首頁
+    </div> -->
+
+
+    <!-- 登入Modal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">用戶登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">帳號</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">請使用註冊帳號時的email進行登入</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                aria-describedby="passWordHelp">
+                            <div id="passWordHelp" class="form-text">密碼至少8碼</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">登入</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 註冊Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">用戶註冊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation">
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">帳號</label>
+                            <input type="email" class="form-control" id="validationCustom01"
+                                aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">請使用email進行註冊</div>
+                            <div class="invalid-feedback">
+                                請填入內容
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                aria-describedby="passWordHelp" required>
+                            <div class="invalid-feedback">
+                                請填入內容
+                            </div>
+                            <div id="passWordHelp" class="form-text">密碼至少8碼</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                            <label class="form-check-label" for="exampleCheck1">我同意遊戲公司所有亂寫的條件</label>
+                            <div class="invalid-feedback">
+                                你必須勾選
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger">註冊</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 轉場modal -->
+    <div class="modal fade background-black" id="nextPage" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.1.1-dist/js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bootstrap-5.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.7.0/csshake.css">
+    <link rel="stylesheet" href="./all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h1><a class="navbar-brand logo ms-auto" href="./index.html">LOGO</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-center active" aria-current="page" href="./index.html">首頁</a>
+                    <a class="nav-link text-center" href="./index.html">關於我們</a>
+                    <a class="nav-link text-center" onclick="nextPage()" href="#">遊戲區</a>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#logInModal">登入</button>
+                    <button class="btn btn-danger" type="button" data-bs-toggle="modal"
+                        data-bs-target="#signInModal">註冊</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="game">
+            <!-- <div id="section"></div> -->
+        </div>
+    </div>
+
+    <!-- 音效區 -->
+    <audio src="./Marvel Opening Theme.mp3" id="openMusic" loop></audio>
+    <!-- <audio src="./yt1s.com - Avengers Assemble Sound Effect.mp3" id="assembleMusic"></audio> -->
+    <audio src="./yt1s.com - Correct Answer Sound Effect.mp3" id="correctMusic"></audio>
+    <audio src="./yt1s.com - Wrong Buzzer Sound Effect  green screen.mp3" id="wrongMusic"></audio>
+
+
+    <!-- 登入Modal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">用戶登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">帳號</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">請使用註冊帳號時的email進行登入</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                aria-describedby="passWordHelp">
+                            <div id="passWordHelp" class="form-text">密碼至少8碼</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">登入</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 註冊Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">用戶註冊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation">
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">帳號</label>
+                            <input type="email" class="form-control" id="validationCustom01"
+                                aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">請使用email進行註冊</div>
+                            <div class="invalid-feedback">
+                                請填入內容
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                required>
+                            <div class="invalid-feedback">
+                                請填入內容
+                            </div>
+                            <!-- <div id="passWordHelp" class="form-text">密碼至少8碼</div> -->
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                            <label class="form-check-label" for="exampleCheck1">我同意遊戲公司所有亂寫的條件</label>
+                            <div class="invalid-feedback">
+                                你必須勾選
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger">註冊</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 開始Modal -->
+    <div class="modal fade" id="startModal" tabindex="-1"  data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body">
+                    <div class="start-bg rounded"></div>
+                </div>
+                <button type="button" class="btn btn-danger w-50 mx-auto mb-3" data-bs-dismiss="modal" id="startGame">GAME START</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 結算(settlementModal)Modal -->
+    <div class="modal fade" id="settlementModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body">
+                    <form class="needs-validation">
+                        <div class="mb3">
+                            <h3 id="showTotalTime" class="text-white"></h3>
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="text" class="form-control" id="userName" required>
+                                    <div id="emailHelp" class="form-text">取一個厲害的暱稱吧！</div>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="userTotalTime" disabled>
+                                    <div id="emailHelp" class="form-text">您的破關時長</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="text-white">是否在英雄榜記錄你的時間？</h5>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="myRefresh()">不要紀錄 我要重新玩就好(((ﾟДﾟ;)))</button>
+                        <button type="button" class="btn btn-danger" onclick="setUserData()" data-bs-dismiss="modal">哪次不紀錄？ 前往紀錄排行榜(●⁰౪⁰●)</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 排行榜 -->
+    <div class="modal fade" id="rankModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal" onclick="myRefresh()">繼續破紀錄</button>
+                    <h5>英雄榜</h5>
+                    <ol id="showRack"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.1.1-dist/js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./all.js"></script>
+</body>
+
+</html>

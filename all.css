@@ -1,0 +1,328 @@
+/* 原本的 */
+/* *,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+/* html,
+body {
+    position: relative;
+    height: 100%;
+} */
+a{
+    text-decoration: none;
+}
+body {
+    background: -webkit-linear-gradient(290deg, #02CCBA 0%, #AA7ECD 100%);
+    background: -o-linear-gradient(290deg, #02CCBA 0%, #AA7ECD 100%);
+    background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+    background-attachment: fixed;
+    /* height: 100%; */
+}
+.logo{
+    background-image: url(https://i.pinimg.com/564x/51/55/7c/51557c8d0f6e23aaa80fb4894b6724a8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: 101%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 99rem;
+    transition: 0.5;
+}
+.logo:hover{
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
+
+#game .userGrid {
+    max-width: 900px;
+    margin: 80px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    height: 500px;
+}
+
+#game .userCard {
+    position: relative;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#game .match {
+    background-image: none !important;
+}
+
+#game .userCard,
+#game .back,
+#game .front {
+    margin: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 190px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+#game .back,
+#game .front {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: -6px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+#game .front {
+    background: url("https://images.unsplash.com/photo-1605106901227-991bd663255c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: contain;
+}
+
+#game .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+#game .userSelected {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#game .match .front {
+    background: none !important;
+    box-shadow: none;
+}
+
+/* spinner */
+.background-black{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(https://images.unsplash.com/photo-1524481905007-ea072534b820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80); */
+    /* filter: brightness(0.7); */
+    background: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center center;
+}
+.spinner {
+    margin: 30vh auto;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1,
+.dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background: white;
+    border-radius: 100%;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+.start-bg{
+    background: url(https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 100%;
+}
+
+
+/* 首頁 */
+.banner{
+    background-image: url(https://images.unsplash.com/photo-1534488972407-5a4aa1e47d83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1646&q=80);
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 84px);
+    width: 100vw;
+    position: relative;
+}
+
+.banner-title{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 55%;
+    right:10%;
+    padding: 60px 28px;
+}
+.banner-title:hover{
+    color: white;
+    border: 5px solid #00ffe0;
+    border-radius: 99rem;
+}
+.category{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.category-area {
+    display: block;
+    width: 25%;
+    height: 300px;
+    background: #000;
+    position: relative;
+}
+.category-game-title{
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+.category-game-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.3);
+    background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2020/06/nostalgic-pictures-rachid-lotf-49-5ee87fe32711a__700.jpg);
+    
+}
+.category-game-title:hover + .category-game-img{
+    filter: brightness(1);
+}
+.category-tv-title {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+.category-tv-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.3);
+    background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2020/06/nostalgic-pictures-rachid-lotf-26-5ee87fb460b65__700.jpg);
+}
+.category-tv-title:hover+.category-tv-img {
+    filter: brightness(1);
+}
+
+.category-text-title {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.category-text-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.3);
+    background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2020/06/nostalgic-pictures-rachid-lotf-9-5ee87f92ef9e5__700.jpg);
+}
+
+.category-text-title:hover+.category-text-img {
+    filter: brightness(1);
+}
+
+.category-buy-title {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.category-buy-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.3);
+    background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2020/06/nostalgic-pictures-rachid-lotf-50-5ee87fe505045__700.jpg);
+}
+
+.category-buy-title:hover+.category-buy-img {
+    filter: brightness(1);
+}
+.footer{
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
