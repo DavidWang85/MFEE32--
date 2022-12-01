@@ -8,42 +8,42 @@ const cardsArray = [
         name: "deadPool",
         img: "https://i.pinimg.com/474x/af/4b/f2/af4bf25a3cb7b13c32340428c1bf8243.jpg"
     },
-    // {
-    //     name: "ironMan",
-    //     img: "https://i.pinimg.com/474x/e7/92/30/e792308fa55fd36d9c534683f25358da.jpg"
-    // },
-    // {
-    //     name: "venom",
-    //     img: "https://i.pinimg.com/474x/0a/67/1f/0a671fb47b371083505fd5506272a658.jpg"
-    // },
-    // {
-    //     name: "warMachine",
-    //     img: "https://i.pinimg.com/564x/9d/98/22/9d982270cb7dec2c8a826f61d0d2b58a.jpg"
-    // },
-    // {
-    //     name: "groot",
-    //     img: "https://i.pinimg.com/474x/9f/46/80/9f46801d155197452acd67b79518fbb1.jpg"
-    // },
-    // {
-    //     name: "spiderMan",
-    //     img: "https://i.pinimg.com/474x/25/08/46/250846cf2b0235424544619fea38c792.jpg"
-    // },
-    // {
-    //     name: "blackWindow",
-    //     img: "https://i.pinimg.com/474x/88/af/96/88af96c282b2b00f4cb0f0e6b97d16b3.jpg"
-    // },
-    // {
-    //     name: "doctorStrange",
-    //     img: "https://i.pinimg.com/474x/28/ef/2b/28ef2bb6df320ca86348f9e83e84f44a.jpg"
-    // },
-    // {
-    //     name: "wanda",
-    //     img: "https://i.pinimg.com/474x/24/e1/44/24e144e3c3a3f6e4bfebdcb41aeaf02f.jpg"
-    // },
-    // {
-    //     name: "thor",
-    //     img: "https://i.pinimg.com/474x/6c/d3/da/6cd3daba9ab80ecb088a396fd7d1e862.jpg"
-    // }
+    {
+        name: "ironMan",
+        img: "https://i.pinimg.com/474x/e7/92/30/e792308fa55fd36d9c534683f25358da.jpg"
+    },
+    {
+        name: "venom",
+        img: "https://i.pinimg.com/474x/0a/67/1f/0a671fb47b371083505fd5506272a658.jpg"
+    },
+    {
+        name: "warMachine",
+        img: "https://i.pinimg.com/564x/9d/98/22/9d982270cb7dec2c8a826f61d0d2b58a.jpg"
+    },
+    {
+        name: "groot",
+        img: "https://i.pinimg.com/474x/9f/46/80/9f46801d155197452acd67b79518fbb1.jpg"
+    },
+    {
+        name: "spiderMan",
+        img: "https://i.pinimg.com/474x/25/08/46/250846cf2b0235424544619fea38c792.jpg"
+    },
+    {
+        name: "blackWindow",
+        img: "https://i.pinimg.com/474x/88/af/96/88af96c282b2b00f4cb0f0e6b97d16b3.jpg"
+    },
+    {
+        name: "doctorStrange",
+        img: "https://i.pinimg.com/474x/28/ef/2b/28ef2bb6df320ca86348f9e83e84f44a.jpg"
+    },
+    {
+        name: "wanda",
+        img: "https://i.pinimg.com/474x/24/e1/44/24e144e3c3a3f6e4bfebdcb41aeaf02f.jpg"
+    },
+    {
+        name: "thor",
+        img: "https://i.pinimg.com/474x/6c/d3/da/6cd3daba9ab80ecb088a396fd7d1e862.jpg"
+    }
 ];
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
